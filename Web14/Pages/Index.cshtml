@@ -1,0 +1,25 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Identity
+@using Web14.Models
+
+@model IndexModel
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@{
+    ViewData["Title"] = "Home page";
+    var a = SignInManager.IsSignedIn(User) ? "Đăng nhập rồi!" : "Chưa đăng nhập?";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h1>@a</h1>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h2>@UserManager.GetUserName(User)</h2>
+    }
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
