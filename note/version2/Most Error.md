@@ -1,0 +1,1 @@
+1. khi dùng [Route] cho [Action] [Get] thì cũng phải dùng [Route] cho [Action] [Post] 

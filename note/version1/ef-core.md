@@ -22,6 +22,12 @@
     }, 
     -->
 
+    <!-- 
+    "ConnectionStrings": {
+        "Default": "Data Source=.; Initial Catalog=mvc01; Integrated Security=true"
+    }, 
+    -->
+
 - Đăng ký  service trong ConfigureServices
     <!-- 
         services.AddDbContext<ArticleContext>(options =>
